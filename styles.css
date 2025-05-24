@@ -17,12 +17,15 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    /* Fallback background for browsers that don't support backdrop-filter */
+    background: rgba(33, 33, 33, 0.98);
+    /* Modern browsers with backdrop-filter support */
     background: rgba(33, 33, 33, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 1.5rem 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
 }
 
 .nav-container {
@@ -511,12 +514,15 @@ section:nth-child(even) {
         top: 100%;
         left: 0;
         right: 0;
+        /* Fallback background for browsers that don't support backdrop-filter */
         background: rgba(33, 33, 33, 0.98);
+        /* Modern browsers with backdrop-filter support */
+        background: rgba(33, 33, 33, 0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         flex-direction: column;
         padding: 1rem 0;
         text-align: center;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
     }
 
     .nav-links.active {
